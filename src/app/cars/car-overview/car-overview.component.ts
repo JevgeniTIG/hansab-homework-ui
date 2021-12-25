@@ -1,7 +1,5 @@
 import {Component, OnDestroy, OnInit} from "@angular/core";
-import {UserService} from "../../services/user.service";
 import {IdSharingService} from "../../services/id-sharing.service";
-import {UserModel} from "../../models/UserModel";
 import {CarModel} from "../../models/CarModel";
 import {CarService} from "../../services/car.service";
 
@@ -36,8 +34,6 @@ export class CarOverviewComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.isLoaded = false;
   }
-
-
 
 
 }
