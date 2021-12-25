@@ -1,0 +1,40 @@
+@import "src/shared-themes";
+
+.grid-container {
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 1rem;
+}
+.grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.grid-item-2 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.title-row, .items-row {
+  display: flex;
+  flex-direction: row;
+}
+.title-row {
+  margin-bottom: 1rem;
+  color: $project-color-1;
+  font-size: 14px;
+}
+
+
+.title-item, .item {
+  width: 15vw;
+}
+
+.item {
+  color: $project-color-1;
+  font-size: 12px;
+}
+
+
+.project-btn-1 {
+  margin-top: 1rem;
+  margin-left: calc(50% - 2rem);
+}

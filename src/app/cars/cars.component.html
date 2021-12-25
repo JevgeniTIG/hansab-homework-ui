@@ -1,0 +1,18 @@
+<div class="grid-container">
+  <div class="grid-item-1">
+    <div class="title-row">
+      <span class="title-item">Mark</span>
+      <span class="title-item">Model</span>
+      <span class="title-item">Numberplate</span>
+    </div>
+
+  </div>
+  <div class="grid-item-2">
+    <div class="items-row" *ngFor="let car of cars">
+      <a routerLink="/car-overview" (click)="setCarId(car.id)" class="item">{{car.make}}</a>
+      <a routerLink="/car-overview" (click)="setCarId(car.id)" class="item">{{car.model}}</a>
+      <a routerLink="/car-overview" (click)="setCarId(car.id)" class="item">{{car.numberplate}}</a>
+    </div>
+
+  </div>
+</div>

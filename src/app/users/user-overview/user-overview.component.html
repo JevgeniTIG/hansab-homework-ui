@@ -1,0 +1,28 @@
+<ng-container *ngIf="isLoaded">
+  <div class="grid-container">
+    <div class="grid-item-1">
+      <span class="title-item">Name</span>
+    </div>
+    <div class="grid-item-2">
+      <div class="second-column">
+        <span class="title-item">Make</span>
+        <span class="title-item">Model</span>
+        <span class="title-item">Numberplate</span>
+      </div>
+    </div>
+
+    <div class="grid-item-3">
+      <span class="column-item">{{user.name}}</span>
+    </div>
+    <div class="grid-item-4">
+      <div class="second-column" *ngFor="let car of cars">
+        <span class="column-item">{{car.make}}</span>
+        <span class="column-item">{{car.model}}</span>
+        <span class="column-item">{{car.numberplate}}</span>
+      </div>
+    </div>
+  </div>
+
+
+  <button class="project-btn-1" routerLink="/users">Back</button>
+</ng-container>

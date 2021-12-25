@@ -1,0 +1,49 @@
+@import 'src/shared-themes';
+
+.grid-container {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 1rem;
+}
+
+.grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.grid-item-2 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+.grid-item-3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.grid-item-4 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+mat-divider {
+}
+
+.title-item {
+  width: 15vw;
+  text-align: left;
+  font-size: 14px;
+  color: $project-color-1;
+}
+
+.second-column {
+  display: flex;
+  flex-direction: row;
+}
+
+.column-item {
+  width: 15vw;
+  text-align: left;
+  font-size: 12px;
+  color: $project-color-1;
+}
+.project-btn-1 {
+  margin-left: calc(50% - 2rem);
+  margin-top: 1rem;
+}

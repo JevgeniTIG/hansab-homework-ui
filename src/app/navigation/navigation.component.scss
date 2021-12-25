@@ -1,0 +1,21 @@
+@import 'src/shared-themes.scss';
+
+mat-toolbar {
+ min-height: 16vh;
+
+}
+.grid-toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-2-col {
+  text-align: end;
+}
+.grid-3-col {
+  margin-left: 1rem;
+}
+
+.logo-image {
+  margin-left: 12vw;
+}

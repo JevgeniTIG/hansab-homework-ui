@@ -1,0 +1,23 @@
+<ng-container *ngIf="isLoaded">
+  <div class="grid-container">
+    <div class="grid-item-1">
+      <div class="title-row">
+        <span class="title-item">Mark</span>
+        <span class="title-item">Model</span>
+        <span class="title-item">Numberplate</span>
+      </div>
+
+    </div>
+    <div class="grid-item-2">
+      <div class="items-row">
+        <span class="item">{{car.make}}</span>
+        <span class="item">{{car.model}}</span>
+        <span class="item">{{car.numberplate}}</span>
+      </div>
+
+    </div>
+  </div>
+
+
+<button class="project-btn-1" routerLink="/cars">Back</button>
+</ng-container>

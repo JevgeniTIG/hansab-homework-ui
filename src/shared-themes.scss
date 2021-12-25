@@ -1,0 +1,39 @@
+// project colors
+$project-color-1: #161f64;
+$project-color-2: #8276b4;
+
+.grid-container {
+  display: grid;
+  margin-left: 5vw;
+}
+
+.svg-icon {
+  height: 36px;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: $project-color-1;
+}
+a:hover {
+  color: $project-color-2;
+}
+
+.project-btn-1 {
+  color: #FFFFFF;
+  background-color: #161f64;
+  width: 4rem;
+  height: 2rem;
+  font-size: 16px;
+  border: none;
+}
+
+.project-btn-1:hover {
+  color: #FFFFFF;
+  background-color: #8276b4;
+}
