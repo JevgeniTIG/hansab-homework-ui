@@ -1,6 +1,4 @@
 import {Component} from "@angular/core";
-import {UserModel} from "../models/UserModel";
-import {UserService} from "../services/user.service";
 import {IdSharingService} from "../services/id-sharing.service";
 import {CarModel} from "../models/CarModel";
 import {CarService} from "../services/car.service";
@@ -14,6 +12,7 @@ import {CarService} from "../services/car.service";
 export class CarsComponent {
 
   cars: CarModel [] = [];
+  isLoaded = false;
 
   constructor(private carService: CarService,
               private idSharingService: IdSharingService) {
@@ -27,6 +26,7 @@ export class CarsComponent {
   getAllCars(): void {
     this.carService.getAllCars().subscribe(data => {
       this.cars = data;
+      this.isLoaded = true;
     })
   }
 

@@ -1,3 +1,7 @@
+<div class="spinner-wrapper" *ngIf="!isLoaded">
+  <mat-spinner [diameter]="28" class="mat-spinner-color"></mat-spinner>
+</div>
+<ng-container *ngIf="isLoaded">
 <div class="grid-container">
   <div class="grid-item-1">
     <div class="title-row">
@@ -16,3 +20,4 @@
 
   </div>
 </div>
+</ng-container>

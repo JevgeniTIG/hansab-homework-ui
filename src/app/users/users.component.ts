@@ -17,6 +17,7 @@ export class UsersComponent implements OnInit {
   sortedUsers: UserModel [] = [];
   nothingFound = false;
   sortingInitiated = false;
+  isLoaded = false;
 
   constructor(private userService: UserService,
               private idSharingService: IdSharingService,
@@ -33,6 +34,7 @@ export class UsersComponent implements OnInit {
     this.userService.getAllUsers().subscribe(data => {
       this.users = data;
       this.sortedUsers = data;
+      this.isLoaded = true;
     })
   }
 

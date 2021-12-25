@@ -37,3 +37,16 @@ a:hover {
   color: #FFFFFF;
   background-color: #8276b4;
 }
+
+
+.spinner-wrapper {
+  display: block;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  margin-left: calc(50% - 18px);
+}
+.mat-spinner-color::ng-deep circle {
+  stroke: $project-color-2 !important;
+  display: block;
+  align-items: center;
+}

@@ -1,3 +1,8 @@
+<div class="spinner-wrapper" *ngIf="!isLoaded">
+  <mat-spinner [diameter]="28" class="mat-spinner-color"></mat-spinner>
+</div>
+
+<ng-container *ngIf="isLoaded">
 <div class="grid-container">
   <div class="grid-item-1">
     <div class="search-form-and-button">
@@ -38,3 +43,4 @@
   </div>
 </div>
 
+</ng-container>
