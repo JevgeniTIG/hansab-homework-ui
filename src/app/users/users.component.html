@@ -3,44 +3,45 @@
 </div>
 
 <ng-container *ngIf="isLoaded">
-<div class="grid-container">
-  <div class="grid-item-1">
-    <div class="search-form-and-button">
-      <form class="example-form">
-        <mat-form-field class="search-form" appearance="fill">
-          <mat-label>Name</mat-label>
-          <input matInput #searchForm value="">
-        </mat-form-field>
-      </form>
-      <button class="project-btn-1" (click)="searchForUser(searchForm.value)">Submit</button>
+  <div class="grid-container">
+    <div class="grid-item-1">
+      <div class="search-form-and-button">
+        <form class="example-form">
+          <mat-form-field class="search-form" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput #searchForm value="">
+          </mat-form-field>
+        </form>
+        <button (click)="searchForUser(searchForm.value)" class="project-btn-1">Submit</button>
+      </div>
     </div>
-  </div>
-  <div class="grid-item-2">
-    <img class="svg-icon" src="assets/person-icon.svg">
-  </div>
-  <div class="grid-item-3">
-    <img class="svg-icon" src="assets/car-icon.svg">
-  </div>
-  <div class="grid-item-4">
-    <div *ngIf="!nothingFound">
-    <a class='list-item' *ngFor="let user of sortedUsers" routerLink="/user-overview"
-       (click)="setUserId(user.id.toString())">{{user.name}}</a>
+    <div class="grid-item-2">
+      <img class="svg-icon" src="assets/person-icon.svg">
     </div>
-    <div *ngIf="nothingFound">Nothing found</div>
+    <div class="grid-item-3">
+      <img class="svg-icon" src="assets/car-icon.svg">
+    </div>
+    <div class="grid-item-4">
+      <div *ngIf="!nothingFound">
+        <a class='list-item' *ngFor="let user of sortedUsers" routerLink="/user-overview"
+           (click)="setUserId(user.id.toString())">{{user.name}}</a>
+      </div>
+      <div *ngIf="nothingFound">Nothing found</div>
 
-  </div>
-  <div class="grid-item-5">
-    <div *ngIf="!nothingFound">
-    <a class='list-item' *ngFor="let user of sortedUsers" routerLink="/user-overview" (click)="setUserId(user.id.toString())">Registered
-      vehicles: {{user.cars.length}}</a>
     </div>
-  </div>
+    <div class="grid-item-5">
+      <div *ngIf="!nothingFound">
+        <a class='list-item' *ngFor="let user of sortedUsers" routerLink="/user-overview"
+           (click)="setUserId(user.id.toString())">Registered
+          vehicles: {{user.cars.length}}</a>
+      </div>
+    </div>
 
-  <div class="grid-item-6">
-    <div *ngIf="sortingInitiated">
-      <button class="project-btn-1" (click)="reloadPage()">Back</button>
+    <div class="grid-item-6">
+      <div *ngIf="sortingInitiated">
+        <button class="project-btn-1" (click)="reloadPage()">Back</button>
+      </div>
     </div>
   </div>
-</div>
 
 </ng-container>

@@ -27,7 +27,6 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {
     this.getAllUsers()
 
-
   }
 
   getAllUsers(): void {
@@ -53,7 +52,7 @@ export class UsersComponent implements OnInit {
       this.nothingFound = true;
     }
     this.users.forEach(u => {
-      if (u.name.includes(name)) {
+      if (u.name.toUpperCase().includes(name.toUpperCase())) {
 
         this.sortedUsers.push(u);
       }
